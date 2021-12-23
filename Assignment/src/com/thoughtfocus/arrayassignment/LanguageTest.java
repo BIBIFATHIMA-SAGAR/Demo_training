@@ -3,6 +3,8 @@ package com.thoughtfocus.arrayassignment;
 public class LanguageTest {
 	public static void main(String[] args) {
 		Languages language = new Languages();
+		Languages language1 = new Languages();
+		Languages language2 = new Languages();
 		language.save("Java");
 		language.save("Python");
 		language.save("Js");
@@ -18,8 +20,12 @@ public class LanguageTest {
 		language.save("C#");
 		language.save("Angular");
 		language.printAll();
-		String delete=language.delete("Python");
-		System.out.println(delete);
+		System.out.println("-------------------");
+		language.update("Python", "py");
+//		System.out.println("--------------------");
+//		String delete=language.delete("Js");
+//		language.printAll();
+//		System.out.println(delete);
 		language.printAll();
 	}
 

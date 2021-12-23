@@ -19,8 +19,13 @@ public class TestMonth {
 
 		
 		months.printAll();
-		String response = months.delete("Mar");
-		System.out.println(response);
+		System.out.println("-------------------");
+		months.update("Mar", "March");
+		months.printAll();
+		System.out.println("------------------");
+//		String response = months.delete("Mar");
+//		System.out.println(response);
+		months.delete("Apr");
 		months.printAll();
 		
 		

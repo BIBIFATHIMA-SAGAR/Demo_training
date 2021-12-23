@@ -6,7 +6,8 @@ public class TestWeek {
 		// TODO Auto-generated method stub
 		Week week = new Week();
 //		week.save("Sun");
-		week.delete("Sun");
+		String del = week.delete("Sun");
+		System.out.println(del);
 		week.printAll();
 		
 

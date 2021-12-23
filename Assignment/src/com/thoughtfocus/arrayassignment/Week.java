@@ -31,7 +31,7 @@ public class Week {
 		for(int i=0;i<days.length;i++) {
 			if(days[i].equals(day)) {
 				days[i]=null;
-			return "day deleted ";
+			return day+" deleted ";
 			}
 			
 		}

@@ -25,15 +25,25 @@ public class Months {
 			return false;
 		}	
 	}
-	public String delete(String month) {
+	public void delete(String month) {
 		for(int index=0;index<months.length;index++) {
 			if(months[index].equals(month)) {
-				months[index]= null;
-				return "month deleted successfully";
+				months[index]= month+" deleted";
+//				return month+ deleted successfully";
 			}
 		}
-		return "month not deleted";
+//		return "month not deleted";
 	}
 	
+	public String update(String oldName, String newName) {
+		for(int index=0;index<months.length;index++) {
+			if(months[index].equals(oldName)) {
+				months[index]=newName;
+				return oldName+" updated to "+newName;
+			}
+		}
+		return "name not updated";
+	}
+	
+	}
 
-}
