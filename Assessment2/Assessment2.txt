@@ -1,0 +1,191 @@
+//1
+null pointer exception
+
+//2
+Exception is abnormal condition that may interrupt the normal flow of program execution
+Exception handling is mechanishm to handle the exceptions so the normal flow can be maintained
+
+Java exception handling is managed via five keywords: try, catch, throw, throws, and finally.
+
+
+//3
+userdefined exceptions are called as custom exceptions
+Custom exceptions provide the flexibility to add attributes and methods that are not part of a standard Java exception
+
+
+
+
+//4
+Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit.
+1. Class should be public
+2. Properties should be private
+3.Public getter and setter methods
+4.Atleast 1 default constructor
+5.class should not be final
+
+
+
+//5
+Polymorphism in Java is the ability of an object to take many forms.
+1.Runtime Polymorphism
+2.CompileTime Polymorphism
+
+
+//6
+ - 2 or more methods having same name but diff parameters in same class is known as Method Overloading.
+
+E.g.,
+class A{
+
+ public void add(){
+    System.out.println(4+6);
+  }
+
+  public void add(int a, int b){
+    System.out.println(a+b);
+  }
+
+
+
+}
+
+
+//7
+Overriding - If child class has the same method as declared in the parent class , it is known as Method Overriding.
+
+class School {
+
+public void school(){
+ System.out.print(" Going to school");
+}
+
+}
+
+
+class Student extends School {
+
+void school (){
+System.out.print(" Going to school");
+}
+
+
+public static void main (String args[]){
+  Student student = new Student ();
+  s.school();
+}
+
+}
+
+
+//8
+args
+
+
+//9
+
+Output- Error : method provideTraining() is already defined in class Institutes
+
+
+//10
+
+Output-Error
+Institues is a class not a interface so we cannot implement it
+
+
+
+//11
+Abstraction is the concept of object-oriented programming that "shows" only essential attributes and "hides" unnecessary information. 
+The main purpose of abstraction is hiding the unnecessary details from the users.
+
+we can achieve abstraction in two ways: abstract class (0 to 100%) and interface (100%)
+
+
+
+//12
+variable
+int x = 10;
+or
+int x;
+x=10
+
+
+
+
+//
+public class Mobile {
+	private int mobileId;
+	private String modelName;
+	private double price;
+	public int getMobileId() {
+		return mobileId;
+	}
+	public void setMobileId(int mobileId) {
+		this.mobileId = mobileId;
+	}
+	public String getModelName() {
+		return modelName;
+	}
+	public void setModelName(String modelName) {
+		this.modelName = modelName;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Mobile [mobileId=" + mobileId + ", modelName=" + modelName + ", price=" + price + "]";
+	}
+	
+	
+	
+
+}
+
+
+public class MobileDTO {
+	Mobile[] details = new Mobile[10];
+	int index = 0;
+
+	public boolean add(Mobile details) {
+		if (details != null) {
+			this.details[index] = details;
+			index++;
+			return true;
+
+		}
+		return false;
+	}
+
+	public void getAll() {
+		for (int i = 0; i < details.length; i++) {
+			if (details[i] != null) {
+				System.out.println(details[i]);
+			}
+
+		}
+	}
+	
+	public String deletebyMobileId(int id) {
+
+		for (int index = 0; index < details.length; index++) {
+			if (details[index] != null) {
+				if (id == (details[index].getMobileId())) {
+					details[index] = null;
+					return "Trainee details deleted " + id;
+
+				}
+
+			}
+
+		}
+
+		return "not deleted";
+
+	}
+}
+
+
+
