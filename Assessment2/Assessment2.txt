@@ -35,17 +35,22 @@ Polymorphism in Java is the ability of an object to take many forms.
  - 2 or more methods having same name but diff parameters in same class is known as Method Overloading.
 
 E.g.,
-class A{
+public class Adder {
+	public int add(int a,int b) {
+		return (a+b);
+	}
+	
+	public int add(int x, int y, int z) {
+		return(x+y+z);
+	}
 
- public void add(){
-    System.out.println(4+6);
-  }
-
-  public void add(int a, int b){
-    System.out.println(a+b);
-  }
-
-
+}
+public class TestAdder {
+	public static void main(String[] args) {
+		Adder a = new Adder();
+		System.out.println(a.add(2, 3));
+		System.out.println(a.add(3, 4, 5));
+	}
 
 }
 
@@ -53,26 +58,30 @@ class A{
 //7
 Overriding - If child class has the same method as declared in the parent class , it is known as Method Overriding.
 
-class School {
+public class Vehicle {
+	
+	void drive() {
+		System.out.println("driving a vehicle");
+	}
 
-public void school(){
- System.out.print(" Going to school");
 }
+public class Car extends Vehicle {
+	
+	public void drive() {
+		// TODO Auto-generated method stub
+		super.drive();
+		System.out.println("driving car");
+	}
 
 }
+public class TestOverride {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car car= new Car();
+		car.drive();
 
-class Student extends School {
-
-void school (){
-System.out.print(" Going to school");
-}
-
-
-public static void main (String args[]){
-  Student student = new Student ();
-  s.school();
-}
+	}
 
 }
 
@@ -111,81 +120,6 @@ x=10
 
 
 
-//
-public class Mobile {
-	private int mobileId;
-	private String modelName;
-	private double price;
-	public int getMobileId() {
-		return mobileId;
-	}
-	public void setMobileId(int mobileId) {
-		this.mobileId = mobileId;
-	}
-	public String getModelName() {
-		return modelName;
-	}
-	public void setModelName(String modelName) {
-		this.modelName = modelName;
-	}
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
-	@Override
-	public String toString() {
-		return "Mobile [mobileId=" + mobileId + ", modelName=" + modelName + ", price=" + price + "]";
-	}
-	
-	
-	
-
-}
-
-
-public class MobileDTO {
-	Mobile[] details = new Mobile[10];
-	int index = 0;
-
-	public boolean add(Mobile details) {
-		if (details != null) {
-			this.details[index] = details;
-			index++;
-			return true;
-
-		}
-		return false;
-	}
-
-	public void getAll() {
-		for (int i = 0; i < details.length; i++) {
-			if (details[i] != null) {
-				System.out.println(details[i]);
-			}
-
-		}
-	}
-	
-	public String deletebyMobileId(int id) {
-
-		for (int index = 0; index < details.length; index++) {
-			if (details[index] != null) {
-				if (id == (details[index].getMobileId())) {
-					details[index] = null;
-					return "Trainee details deleted " + id;
-
-				}
-
-			}
-
-		}
-
-		return "not deleted";
-
-	}
-}
 
 
 
