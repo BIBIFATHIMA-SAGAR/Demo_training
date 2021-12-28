@@ -33,7 +33,15 @@ public class Tester {
 		dao.updateBySerialNumber(12, 40);
 		dao.getAll();
 		System.out.println("------gettingByBrandName----------");
+		try {
 		dao.getAllByBrandName("eitjg");
+		}
+		catch(BrandNameNotFoundException e){
+			System.out.println(e.getMessage());
+			
+		}
+		dao.getAll();
 	}
 
 }
+
