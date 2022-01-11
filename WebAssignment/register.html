@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div>
+    <nav>
+        <div>
+			<div class="logo">
+				<img class="image" src="images/logo.jpg" alt="">
+			</div>
+			<div class="compnyName">
+				<img class="com" src="images/logo.php" alt="">
+			</div>
+			<div class="s-link">
+				<ul>
+					<li><a class="nav-link" href="https://www.facebook.com">Facebook</a> </li>
+					<li><a class="nav-link" href="https://www.instagram.com">Instagram</a> </li>
+					<li><a  class="nav-link" href="https://www.whatsapp.com">WhatsApp</a> </li>
+
+				</ul>
+			</div>
+		</div>
+    </nav>
+</div>
+<section>
+    <div class="form-div">
+        <form  onsubmit="return  registerValidation();" action="login.html">
+            <h1 class="reg-heading">New HR Register Form</h1>
+            <table>
+                <tr>
+                    <td><label>First Name:</label></td>
+                    <td><input  id="invalidFname" type="text" name="fname" autocomplete="off" placeholder="First Name" autofocus></td>
+                    <td><label id="msg1" style="color: red; visibility: hidden;">Enter First Name</label></td>   
+                </tr>
+                <tr>
+                    <td><label>Last Name:</label></td>
+                    <td><input id="invalidLname" type="text" name="name" autocomplete="off" placeholder="Last name" ></td>   
+                    <td><label id="message" style="color: red; visibility: hidden;">Enter Last Name</label></td>
+                </tr>
+                <tr>
+                <td><label>User Name:</label></td>
+                <td><input id="invalidUser"  type="text" autocomplete="off" name="username" placeholder="User Name" ></td>
+                <td><label id="msg3" style="color: red; visibility: hidden;">Enter User Name</label></td>
+				</tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td><input id="invalidPwd" type="password" autocomplete="off" name="password" placeholder="password"></td>
+                    <td><label id="msg2" style="color: red; visibility: hidden;">Enter Password</label></td>
+                </tr> 
+               
+                <tr>
+                    <td><label>Contact No:</label></td>
+                    <td><input type="tel" minlength="6" id="contact" autocomplete="off" maxlength="10" placeholder="Enter Contact"></td>
+                </tr>
+               
+                <tr>
+                    <td><label>Address:</label></td>
+                    <td><textarea name="address" id="address" autocomplete="off" cols="30" rows="10"></textarea></td>
+                </tr>
+               
+                <tr><td></td>
+                    <td><button type="submit" value="submit">Register</button>
+                    <button type="reset" value="reset">Reset</button></td>
+                    <td></td>
+                </tr>
+               
+        
+            </table>
+        
+           
+       
+            
+        </form>
+       
+    </div>
+</section>
+<div>
+    <footer style="text-align: center; color: white;">All rights reserved &copy;2022</footer>
+</div>
+
+
+
+</body>
+</html>

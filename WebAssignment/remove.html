@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Employee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/add.js"></script>
+</head>
+<body>
+    <div >
+        <nav>
+            
+            <div class="logo">
+                <img class="image" src="images/logo.jpg" alt="">
+            </div>
+            <div class="compnyName">
+                <img class="com" src="images/logo.php" alt="">
+            </div>
+            <div class="s-link">
+                <ul>
+                    <li><a class="nav-link" href="https://www.facebook.com">Facebook</a> </li>
+                    <li><a class="nav-link" href="https://www.instagram.com">Instagram</a> </li>
+                    <li><a class="nav-link" href="https://www.whatsapp.com">WhatsApp</a> </li>
+    
+                </ul>
+            
+        </nav>
+    </div>
+</div>
+<section class="employee">
+    <div class="emp" >
+        <ul class="emp-detail-horizontal">
+            <li ><a  href="index.html">Home</a></li>
+            <li ><a href="view.html">View Employee</a></li>
+            <li ><a href="remove.html">Remove</a></li>
+            <li ><a href="#">Search</a></li>
+            
+        </ul>
+    </div>
+        <form >
+            <table>
+            <tr>
+                <td><label>Employee Id: </label></td>
+                <td><input type="text" id="remove" placeholder="Employee Id"></td>
+                <td><label id="invalid-user" style="color: red; visibility: hidden;">Invalid Username</label></td>
+            </tr>
+        </table>
+       <p style="margin-left: 495px;">
+                
+            <input onclick="remove()"  type="submit" name="btn-login" value="Remove">  
+       
+       </p>
+        
+        </form>
+       
+    </div>
+</section>
+<div>
+    <footer style="text-align: center; color: white;">All rights reserved &copy;2022</footer>
+</div>
+
+<script>
+  
+    function remove(){
+    var empId = document.getElementById("remove").value;
+    
+    let user_records=new Array();
+    user_records=JSON.parse(localStorage.getItem("Empdetails"))?JSON.parse(localStorage.getItem("Empdetails")):[]
+    if(user_records)
+    {
+      for(let i=0;i<user_records.length;i++)
+      {
+        if(user_records[i].id == empId) {
+            user_records.splice(i, 1);
+            alert("Removed ");
+            getEmp();
+            break;
+        }
+      }
+    }
+}
+
+</script>
+</body>
+</html>

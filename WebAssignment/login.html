@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+   
+    <nav>
+        
+        <div class="logo">
+            <img class="image" src="images/logo.jpg" alt="">
+        </div>
+        <div class="compnyName">
+            <img class="com" src="images/logo.php" alt="">
+        </div>
+        <div class="s-link">
+            <ul>
+                <li><a class="nav-link" href="https://www.facebook.com">Facebook</a> </li>
+                <li><a class="nav-link" href="https://www.instagram.com">Instagram</a> </li>
+                <li><a class="nav-link" href="https://www.whatsapp.com">WhatsApp</a> </li>
+
+            </ul>
+        
+    </nav>
+
+<section>
+    <div class="form-div div-offset">
+        <form >
+            <table>
+            <tr>
+                <td><label>User Name: </label></td>
+                <td><input type="text" id="user" placeholder="UserName or Email"></td>
+                <td><label id="invalid-user" style="color: red; visibility: hidden;">Invalid Username</label></td>
+            </tr>
+            <tr>
+                <td><label>Password: </label></td>
+                <td><input type="password" id="pass" name="password" placeholder="Password"></td>
+                <td><label id="invalid-pass" style="color: red; visibility: hidden;">Invalid Password</label></td>
+                <td><label id="short-pass" style="color: red; visibility: hidden;">Password is too short</label></td>
+            </tr>
+           
+        </table>
+       <p>
+                
+            <input type="submit" name="btn-login" value="Login" onclick="validate()" >  
+       
+       </p>
+        
+        </form>
+        <div class="register-user">
+            <button class="reg-button" >
+                <a href="register.html">Register</a>
+            </button>
+        </div>
+    </div>
+</section>
+<div>
+    <footer style="text-align: center; color: white;">All rights reserved &copy;2022</footer>
+</div>
+
+</body>
+</html>
+
+

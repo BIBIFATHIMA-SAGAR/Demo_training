@@ -1,0 +1,126 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.logo,.compnyName,.s-link{
+    height: 98px;
+    /* border: 1px solid black; */
+    display: inline-block;
+    
+    width: 505px;
+}
+
+.logo{
+    width: 400px;
+}
+nav{
+    height: 98px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+}
+.button{
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-left: 40;
+    width: 100px;
+    text-align: center;
+}
+
+
+.nav-link:hover{
+    background-color: rgb(66, 64, 64);
+    font-size: 20px;
+    color: white;
+}
+.reg-heading{
+    text-align: center;
+    
+}
+
+.s-link{
+    position: absolute;
+    width: 524px;
+}
+.register{
+    color: black;
+    font-size: 15px;
+}
+.register-user{
+    width: 600px;
+    text-align: center;
+}
+
+
+table{
+    padding: 20px;
+    margin: 0 auto 0 auto;
+  
+    
+}
+input{
+    
+    padding: 16px;
+    border-radius: 6px;
+    
+}
+section{
+    border: 2px solid black;
+    height: 900px;
+    
+}
+footer{
+    height: 40px;
+    width: 100%;
+    background-color: black;
+}
+
+.register-user{
+    width:600px;
+    height: 40px;
+    
+    text-align: center;
+}
+button{
+    height: 30px;
+}
+.form-div{
+    border: 2px solid;
+    height: 600px;
+    width:500px;
+    background-color: #f6f5f7;
+    color: rgb(0, 0, 0);
+    margin: 150px auto 0 auto;
+    text-align: center;
+
+}
+
+img{
+    
+    height: 80px;
+    padding-left: 100px;
+    position: absolute;
+    padding-top: 10px;
+}
+
+.compnyName {
+    width: 600px;
+}
+.com{
+ 
+    width: 400px;
+    
+}
+a{
+    color: rgb(30, 119, 30);
+    text-decoration: none;
+}
+
+li{
+    padding-top: 10px;
+    list-style: none;
+    text-align: center;
+    font-size: 16px;
+    
+}

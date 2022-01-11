@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Employee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/add.js"></script>
+</head>
+<body>
+    <div >
+        <nav>
+            
+            <div class="logo">
+                <img class="image" src="images/logo.jpg" alt="">
+            </div>
+            <div class="compnyName">
+                <img class="com" src="images/logo.php" alt="">
+            </div>
+            <div class="s-link">
+                <ul>
+                    <li><a class="nav-link" href="https://www.facebook.com">Facebook</a> </li>
+                    <li><a class="nav-link" href="https://www.instagram.com">Instagram</a> </li>
+                    <li><a class="nav-link" href="https://www.whatsapp.com">WhatsApp</a> </li>
+    
+                </ul>
+            
+        </nav>
+    </div>
+</div>
+<section class="employee">
+    <div class="emp" >
+        <ul class="emp-detail-horizontal">
+            <li ><a  href="index.html">Home</a></li>
+            <li ><a href="#">View Employee</a></li>
+            <li ><a href="#">Remove</a></li>
+            <li ><a href="#">Search</a></li>
+            
+        </ul>
+    </div>
+	<form onsubmit = "return employeeValidation();">
+		<div class="form-div">
+        <table class="emp-table">
+            <tr>
+                <td><label>Eid:</label></td>
+                <td>
+
+                    <input id="inputId" type="number" name="eid" autocomplete="off" placeholder="Employee id" >
+                </td><td><label id="eid_err" style="color: red; visibility: hidden;">Enetr Employee Id</label></td> 
+            </tr>
+            <tr>
+                <td><label>Name:</label></td>
+                <td>
+                    <input id="inputName" type="text" name="Name" placeholder="Name" autocomplete="off">
+                </td><td><label id="name_err" style="color: red; visibility: hidden;">Enter Name</label></td> 
+
+            </tr>
+            <tr>
+                <td><label>Salary:</label></td>
+                <td>
+                    <input id="inputSal" type="number" name="salary" placeholder="salary" autocomplete="off" >
+                </td><td><label id="salary_err" style="color: red; visibility: hidden;">Enter Salary</label></td> 
+            </tr>  
+            <tr>
+                <td><label>Department:</label></td>
+                <td>
+                    <input id="inputDept" type="text" name="Dept" placeholder="Department" autocomplete="off">
+                </td><td><label id="dept_err" style="color: red; visibility: hidden;">Enter Department</label></td> 
+            </tr>  
+            <tr>
+                <td><label>Skill:</label></td>
+                <td>
+                    <input id="inputSkill" autocomplete="off" type="text" name="Skill" placeholder="skill">
+                </td><td><label id="skill_err" style="color: red; visibility: hidden;">Enter Skill</label></td> 
+            </tr>
+          
+            <tr>
+			<td></td>
+			<td>
+				<button onsubmit="save()" type="submit" value="Add">Add</button>
+			</td>
+			</tr>
+        </table>
+        
+    </div>
+	</form>
+</section>
+
+<div>
+    <footer style="text-align: center; color: white;">All rights reserved &copy;2022</footer>
+</div>7
+
+    
+</body>
+</html>

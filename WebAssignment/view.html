@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/add.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div >
+        <nav>
+            
+            <div class="logo">
+                <img class="image" src="images/logo.jpg" alt="">
+            </div>
+            <div class="compnyName">
+                <img class="com" src="images/logo.php" alt="">
+            </div>
+            <div class="s-link">
+                <ul>
+                    <li><a class="nav-link" href="https://www.facebook.com">Facebook</a> </li>
+                    <li><a class="nav-link" href="https://www.instagram.com">Instagram</a> </li>
+                    <li><a class="nav-link" href="https://www.whatsapp.com">WhatsApp</a> </li>
+    
+                </ul>
+            
+        </nav>
+    </div>
+</div>
+<section class="employee">
+    <div class="emp" >
+        <ul class="emp-detail-horizontal">
+            <li ><a  href="index.html">Home</a></li>
+            <li ><a href="addNewEmployee.html">Addnew Employee</a></li>
+            <li ><a href="remove.html">Remove</a></li>
+            <li ><a href="#">Search</a></li>
+            
+        </ul>
+    </div>
+
+    <form>
+        
+        <div class="col-sm-8" style="border: 1px solid gray;">
+            <h2 style="text-align: center;">Employee Table</h2>
+            <div class="row">
+              <div class="col-sm-2" style="background-color: #e1e2e0;padding: 10px;">Id</div>
+              <div class="col-sm-2" style="background-color: #b6b4ae;padding: 10px;">Name</div>
+              <div class="col-sm-2" style="background-color: #edf0f1;padding: 10px;">Salary</div>
+              <div class="col-sm-2" style="background-color: #afaead;padding: 10px;">Skill</div>
+    
+            </div>
+            <div id="showUsers"></div>
+          </div>
+
+    </form>
+</section>
+
+	
+
+<div>
+    <footer style="text-align: center; color: white;">All rights reserved &copy;2022</footer>
+</div>
+</body>
+</html>
+<script>
+    let user_records=new Array();
+    user_records=JSON.parse(localStorage.getItem("Empdetails"))?JSON.parse(localStorage.getItem("Empdetails")):[]
+    if(user_records)
+    {
+      for(let i=0;i<user_records.length;i++)
+      {
+            let addDiv=document.createElement('div');
+        addDiv.className="row";
+        addDiv.innerHTML='<div class="col-sm-2" style="padding: 10px;">'+user_records[i].id+'</div><div class="col-sm-2" style="padding: 10px;">'+user_records[i].name+'</div><div class="col-sm-2" style="padding: 10px;">'+user_records[i].Sal+'</div><div class="col-sm-2" style="padding: 10px;">'+user_records[i].skill+'</div>';
+        document.getElementById("showUsers").appendChild(addDiv);
+      }
+    }
+
+</script>
